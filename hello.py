@@ -18,7 +18,7 @@ activation_command = "Helix"
 # Define function to generate response from OpenAI API
 def generate_response(prompt):
     response = openai.Completion.create(
-        engine="davinci", prompt=prompt, max_tokens=100, n=1, stop=None, temperature=0.5
+        model="text-ada-001", prompt=prompt, max_tokens=100, n=1, stop=None, temperature=0.5
     )
     return response.choices[0].text.strip()
 
